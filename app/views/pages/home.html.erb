@@ -1,2 +1,12 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
+
+<p>user_signed_in?</p>
+<% if user_signed_in? %>
+   <p>User is signed in!</p>
+<% else %>
+   <p>User is NOT signed in!</p>
+<% end %>
+
+<p>current_user --> only works if there actually is a user signed in!</p>
+<%= current_user.email if current_user %>
